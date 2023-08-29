@@ -1,5 +1,5 @@
 import { Locator, Page } from '@playwright/test';
-import { Config } from '../configuration';
+import { Config } from '../../../shared/environment-configuration';
 
 const config = new Config();
 
@@ -18,7 +18,20 @@ export default class Login {
   }
 
   async goto() {
-    await this.page.goto(this.url);
+    await this.page.goto(this.url);    
+  }
+
+  async performLogin(){
+    // Fill username
+    await this.loginUserNameField.click();
+    await this.loginUserNameField.fill(config.loginUser);
+
+    // Fill password
+    await this.loginPasswordField.click();
+    await this.loginPasswordField.fill(config.loginPassword);
+
+    // Click login
+    await this.loginsubmitBtn.click();
   }
 
 }
