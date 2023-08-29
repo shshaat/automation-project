@@ -5,12 +5,11 @@ import Login from './login.page';
 const { test, expect } = require('@playwright/test');
 const config = new Config();
 
-async function userLogin(pg)  {
+async function userLogin(pg) {
         const login = new Login(pg); 
         await pg.goto(config.baseUrl);
         await login.performLogin()
         console.log("pppppppppppp")
-
 }
 
 module.exports = {userLogin}
