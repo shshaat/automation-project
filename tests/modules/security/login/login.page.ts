@@ -17,15 +17,17 @@ export default class Login {
     this.loginsubmitBtn = page.locator('.submit-btn');
   }
 
-  async goto() {
-    await this.page.goto(this.url);    
+  async goto(pg) {
+    await pg.goto(this.url);
+    console.log("lllllllllll") 
   }
 
   async performLogin(){
     // Fill username
+    console.log("llll")
     await this.loginUserNameField.click();
     await this.loginUserNameField.fill(config.loginUser);
-
+    console.log("eeeee")
     // Fill password
     await this.loginPasswordField.click();
     await this.loginPasswordField.fill(config.loginPassword);
