@@ -15,12 +15,12 @@ const { userLogin } = require('./modules/security/login/login.spec') ;
 //   });
 // })
 
-test.beforeAll(async () => {
-  const browser = await chromium.launch();
-  const context = await browser.newContext();
-  const page = await context.newPage();
-  await userLogin(page);
-})
+// test.beforeAll(async () => {
+//   const browser = await chromium.launch();
+//   const context = await browser.newContext();
+//   const page = await context.newPage();
+//   await userLogin(page);
+// })
 
 // import { test, expect } from '@playwright/test';
 // const { chromium } = require('playwright');

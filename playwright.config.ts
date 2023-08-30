@@ -1,4 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
+export const STORAGE_STATE = './authentication.json'  //path.join(__dirname, 'playwright/.auth/user.json');
 
 /**
  * Read environment variables from file.
@@ -42,8 +43,22 @@ export default defineConfig({
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
-    }
+      testMatch: 'testing.spec.ts',
+      use: { 
+        ...devices['Desktop Chrome'],
+        storageState: STORAGE_STATE,
+    },
+      dependencies: ['setup'],
+    },
+    {
+      name: 'setup',
+      testMatch: /global.setup\.ts/,
+    },
+    // {
+    //   name: 'chromium',
+    //   use: { ...devices['Desktop Chrome'] },
+    //   dependencies: ['setup'],
+    // },
     // {
     //   name: 'firefox',
     //   use: { ...devices['Desktop Firefox'] },

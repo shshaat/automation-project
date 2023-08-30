@@ -1,0 +1,69 @@
+{
+  "cookies": [
+    {
+      "name": "dtSa",
+      "value": "-",
+      "domain": ".andalusiagroup.net",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "rxVisitor",
+      "value": "16933845715752QMF4CPT0C68452IIU0T34M4FEL9M71A",
+      "domain": ".andalusiagroup.net",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "dtCookie",
+      "value": "v_4_srv_2_sn_FEE659346937932571A4FBBDAD4582A5_perc_100000_ol_0_mul_1_app-3A250a3ce6f838ff0f_1_rcs-3Acss_0",
+      "domain": ".andalusiagroup.net",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "dtPC",
+      "value": "2$184571571_125h-vFWFBIMUJFHCWIBDPLCDOLULCTKKBSFNJ-0e0",
+      "domain": ".andalusiagroup.net",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "rxvt",
+      "value": "1693386380459|1693384571578",
+      "domain": ".andalusiagroup.net",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "http://backoffice-systemtest.andalusiagroup.net:1500",
+      "localStorage": [
+        {
+          "name": "HSIP",
+          "value": "{\"GeneralSetupService\":\"http://backoffice-systemtest.andalusiagroup.net:1500/GeneralSetupService/\",\"HospitalStructureService\":\"http://backoffice-systemtest.andalusiagroup.net:1500/HospitalStructureService/\",\"MedicalSetupService\":\"http://backoffice-systemtest.andalusiagroup.net:1500/MedicalSetupService/\",\"ResourceManagerService\":\"http://backoffice-systemtest.andalusiagroup.net:1500/ResourceManagerService/\",\"NotificationService\":\"http://backoffice-systemtest.andalusiagroup.net:1500/NotificationService/\",\"ProductManagmentService\":\"http://backoffice-systemtest.andalusiagroup.net:1500/ProductManagmentService/\",\"OutPatientServices\":\"http://backoffice-systemtest.andalusiagroup.net:1500/OutPatientServices/\",\"MasterPatientIndex\":\"http://backoffice-systemtest.andalusiagroup.net:1500/MasterPatientIndex/\",\"SercurityService\":\"http://backoffice-systemtest.andalusiagroup.net:1500/SercurityService/\",\"BillingService\":\"http://backoffice-systemtest.andalusiagroup.net:1500/BillingService/\",\"VisitManagementDummyService\":\"http://backoffice-systemtest.andalusiagroup.net:1500/VisitManagementDummyService/\",\"PhysicianDesktopDummyService\":\"http://backoffice-systemtest.andalusiagroup.net:1500/PhysicianDesktopDummyService/\",\"VisitManagementService\":\"http://backoffice-systemtest.andalusiagroup.net:1500/VisitManagementService/\",\"BillingEngine.Service\":\"http://backoffice-systemtest.andalusiagroup.net:1500/BillingEngine.Service/\",\"DummyOPDService\":\"http://backoffice-systemtest.andalusiagroup.net:1500/DummyOPDService/\",\"PhysicianDesktopService\":\"http://backoffice-systemtest.andalusiagroup.net:1500/PhysicianDesktopService/\",\"OdooServices\":\"http://backoffice-systemtest.andalusiagroup.net:1500/OdooServices/\",\"HRService\":\"http://backoffice-systemtest.andalusiagroup.net:1500/HRService/\",\"LabRad\":\"http://backoffice-systemtest.andalusiagroup.net:1500/LabRad/\",\"CPOEService\":\"http://backoffice-systemtest.andalusiagroup.net:1500/CPOEService/\",\"Ui.Utilities\":\"http://backoffice-systemtest.andalusiagroup.net:1500/Ui.Utilities/\",\"CPOEDummyService\":\"http://backoffice-systemtest.andalusiagroup.net:1500/CPOEDummyService/\",\"LRDummyService\":\"http://backoffice-systemtest.andalusiagroup.net:1500/LRDummyService/\",\"ORServices\":\"http://backoffice-systemtest.andalusiagroup.net:1500/ORServices/\",\"FinanceService\":\"http://backoffice-systemtest.andalusiagroup.net:8090/Finance.Service/\",\"CPGServices\":\"http://backoffice-systemtest.andalusiagroup.net:8090/CPG.Service/\",\"ERdummyService\":\"http://backoffice-systemtest.andalusiagroup.net:1500/ERdummyService/\",\"ERService\":\"http://backoffice-systemtest.andalusiagroup.net:1500/ERService/\",\"ManageAllergyService\":\"http://backoffice-systemtest.andalusiagroup.net:1500/ManageAllergyService/\",\"NewDentalService\":\"http://backoffice-systemtest.andalusiagroup.net:8090/Dental.Service/\",\"NursePortalService\":\"http://backoffice-systemtest.andalusiagroup.net:1500/NursePortalService/\",\"NursePortalDummyService\":\"http://backoffice-systemtest.andalusiagroup.net:1500/NursePortalDummyService/\",\"DentalService\":\"http://backoffice-systemtest.andalusiagroup.net:1500/DentalService/\",\"SupplyChainService\":\"http://backoffice-systemtest.andalusiagroup.net:8090/SupplyChain.Service/\",\"PatientProblemsService\":\"http://backoffice-systemtest.andalusiagroup.net:1500/PatientProblemsService/\",\"PatientProblemsDummyService\":\"http://backoffice-systemtest.andalusiagroup.net:1500/PatientProblemsDummyService/\",\"SecurityDummyService\":\"http://backoffice-systemtest.andalusiagroup.net:1500/SecurityDummyService/\",\"VitalSignService\":\"http://backoffice-systemtest.andalusiagroup.net:1500/VitalSignService/\",\"BedMgtService\":\"http://backoffice-systemtest.andalusiagroup.net:1500/BedMgtService/\",\"BedMgtDummyService\":\"http://backoffice-systemtest.andalusiagroup.net:1500/BedMgtDummyService/\",\"ClinicalNotesService\":\"http://backoffice-systemtest.andalusiagroup.net:1500/ClinicalNotesService/\",\"ClinicalSheetService\":\"http://backoffice-systemtest.andalusiagroup.net:1500/ClinicalSheetService/\",\"ClinicalSheetWebSite\":\"http://backoffice-systemtest.andalusiagroup.net:1500/ClinicalSheetWebSite/\",\"BloodBankDummyServices\":\"http://backoffice-systemtest.andalusiagroup.net:8090/BloodBankDummyServices/\",\"BloodBankServices\":\"http://backoffice-systemtest.andalusiagroup.net:8090/BloodBank.Service/\",\"PatientProblemsServices\":\"http://backoffice-systemtest.andalusiagroup.net:8090/PatientProblems.Service/\",\"NphiesService\":\"http://backoffice-systemtest.andalusiagroup.net:8090/Nphies.Service/\",\"BONotificationService\":\"http://backoffice-systemtest.andalusiagroup.net:8090/NS.Service/\",\"ScreeningService\":\"http://backoffice-systemtest.andalusiagroup.net:8090/Screening.Service/\",\"MedicalHistoryService\":\"http://backoffice-systemtest.andalusiagroup.net:8090/MedicalHistory.Service/\",\"QueuingManagementService\":\"http://backoffice-systemtest.andalusiagroup.net:8090/QMS.Service/\"}"
+        },
+        {
+          "name": "IsSaudiEntity",
+          "value": "true"
+        }
+      ]
+    }
+  ]
+}
