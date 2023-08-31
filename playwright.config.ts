@@ -46,7 +46,7 @@ export default defineConfig({
       testMatch: 'testing.spec.ts',
       use: { 
         ...devices['Desktop Chrome'],
-        storageState: STORAGE_STATE,
+        storageState: './authentication.json',
     },
       dependencies: ['setup'],
     },
