@@ -1,5 +1,7 @@
 import { Page } from '@playwright/test';
-import { Config } from '../../../shared/environment-configuration';
+//import { Config } from '../../../shared/environment-configuration';
+
+import { Config } from "@tests/shared/environment-configuration";
 import Login from './login.page';
 
 const { test, expect } = require('@playwright/test');
