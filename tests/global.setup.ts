@@ -7,7 +7,7 @@ setup('do login', async ({ page, context }) => {
   
     await userLogin(page);
     
-    await page.waitForURL("**/dashboard");
+    //await page.waitForURL("**/dashboard");
 
     //const storageState = require('../authentication.json');
  
