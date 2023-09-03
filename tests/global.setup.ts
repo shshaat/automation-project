@@ -11,7 +11,7 @@ setup('do login', async ({ page, context }) => {
     await expect(page).toHaveURL(/.*dashboard/);
 
     await page.context().storageState({ path: './authentication.json'});
-
+    await page.close();
 
 });
 

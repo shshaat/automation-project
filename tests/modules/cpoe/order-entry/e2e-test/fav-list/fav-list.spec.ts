@@ -1,13 +1,15 @@
-import { test, expect } from '@playwright/test';
+import { test, expect, Page } from '@playwright/test';
 import { capturePatient } from '@tests/shared/components/capture-patient/capture-patient.spec';
 
-test.beforeAll(async ({ page, context }) => {
+let page:Page;
+
+test.beforeAll(async ({ browser }) => {
+  page = await browser.newPage();
   await capturePatient(page)
 });
 
-test('Example Test', async ({page}) => {
-  await page.goto('http://backoffice-systemtest.andalusiagroup.net:8090/finance/general-ledger/setup/fiscal-year/');
+test('Example Test', async () => {
+  await page.locator('.OrdersTab').click();
 
-  await expect(page).toHaveURL(/.*general-ledger.*/g);
 });
 

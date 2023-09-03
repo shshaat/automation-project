@@ -13,16 +13,3 @@ async function userLogin(pg) {
 }
 
 module.exports = {userLogin}
-
-// test('login', async ({ page }) => {
-//   const login = new Login(page); // Create an instance of Login with the actual page instance
-//   //page.setDefaultTimeout(350000);
-//   await login.goto();
-//   await login.performLogin();  
-  
-//   //get logged in user
-//   await expect(page).toHaveURL(/.*dashboard/);
-
-//   //test.run(capturePatient);
-
-// });
