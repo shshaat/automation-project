@@ -5,7 +5,6 @@ import {PatientData} from "@tests/shared/test-data/patient-data"
 
 
 export async function capturePatient(page){
- // export const capturePatient = test('Capture Patient', async ({ page, context }) => {  
   const config = new Config();
   const patientData = new PatientData()
 
@@ -13,7 +12,7 @@ export async function capturePatient(page){
   await expect(page).toHaveURL(/.*dashboard/);
   //find patient
   await page.locator('#target div').nth(1).click();
-  await page.locator('#navbarCollapse .searchBox input').fill(`${patientData.Name}`);
+  await page.locator('#navbarCollapse .searchBox input').fill(`${patientData.SearchKeyWord}`);
   await page.locator('#navbarCollapse .searchBox input').press('Enter');
   //select patient
   await page.locator('.listitem .Age').click();
@@ -28,5 +27,4 @@ export async function capturePatient(page){
   await page.waitForSelector('form.navbar-nav button.capture-btn');
   await page.locator('form.navbar-nav button.capture-btn').click();  
 }
-//);
   
