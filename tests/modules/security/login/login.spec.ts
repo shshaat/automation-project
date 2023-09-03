@@ -10,7 +10,6 @@ async function userLogin(pg) {
         pg.setDefaultTimeout(350000);
         await pg.goto(config.baseUrl);
         await login.performLogin()
-        console.log("pppppppppppp")
 }
 
 module.exports = {userLogin}
