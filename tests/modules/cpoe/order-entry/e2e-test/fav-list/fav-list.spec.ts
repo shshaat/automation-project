@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
-import { Config } from "@tests/shared/environment-configuration";
+import { capturePatient } from '@tests/shared/components/capture-patient/capture-patient.spec';
 
-test.beforeAll(async () => {
-  console.log('Before tests');
+test.beforeAll(async ({ page, context }) => {
+  await capturePatient(page)
 });
 
 test('Example Test', async ({page}) => {
