@@ -1,5 +1,5 @@
 import { Locator, Page } from '@playwright/test';
-import { Config } from '../../../shared/environment-configuration';
+import { Config } from '@tests/shared/environment-configuration';
 
 const config = new Config();
 
@@ -10,7 +10,7 @@ export default class Login {
   readonly loginPasswordField: Locator;
   readonly loginsubmitBtn: Locator;
 
-  constructor(page: Page) {
+  constructor(page) {
     this.page = page;
     this.loginUserNameField = page.locator('#userName');
     this.loginPasswordField = page.locator('#password');
@@ -21,13 +21,13 @@ export default class Login {
     await pg.goto(this.url);
   }
 
-  async performLogin(){
+  async performLogin(user,pass){
     // Fill username
     await this.loginUserNameField.click();
-    await this.loginUserNameField.fill(config.loginUser);
+    await this.loginUserNameField.fill(user);
     // Fill password
     await this.loginPasswordField.click();
-    await this.loginPasswordField.fill(config.loginPassword);
+    await this.loginPasswordField.fill(pass);
 
     // Click login
     await this.loginsubmitBtn.click();
