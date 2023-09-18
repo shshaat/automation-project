@@ -21,6 +21,10 @@ test.describe('Dummy', () => {
   test('supply-chain', async () => {
     await page.goto('http://backoffice-systemtest.andalusiagroup.net:8090/supply-chain/inventory-management/inventory-operations/internal-request/');
   });
+  // 
+  test('dummy-function', async ()=> {
+    await page.goto('http://backoffice-systemtest.andalusiagroup.net:8090/supply-chain/inventory-management/inventory-operations/internal-request/');
+  });
 });
 
 
