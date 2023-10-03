@@ -1,28 +1,32 @@
 
 
 import { test, expect,Page, request, APIResponse } from '@playwright/test';
-import { Entry } from '../e2e-test/Entry';
-import { PL } from '../e2e-test/PL.pages';
-//import { NtlmClient } from 'ntlm-client' // plz install --> npm install ntlm-client
+import { PageL } from './PL.pages';
+import { Config } from '@tests/shared/environment-configuration';
 
 
-let page:Page;
-let Lc = new PL;
-const Udata = new Entry (Lc.Uname,Lc.Upass);
 const RandomTxt = Math.random().toString(36).substring(2,9);
 const sql = require('mssql');
 
+//import { NtlmClient } from 'ntlm-client' // plz install --> npm install ntlm-client
+
+const conf=new Config;
+let page:Page;
+let Lc = new PageL;
+
+
+
 test.beforeEach(async ({page}) => {
-  await page.goto(Lc.SystemURL);
+  await page.goto(Lc.env.baseUrl);
   //await page.goto(Lc.SystemURL);
-  await page.waitForURL(Lc.SystemURL);
+  await page.waitForURL(Lc.env.baseUrl);
   page.getByText('Login');
 
   await page.locator(Lc.SystemUserName).click();
-  await page.locator(Lc.SystemUserName).fill(Udata.getUserName ());
+  await page.locator(Lc.SystemUserName).fill(conf.loginUser);
   await page.locator(Lc.SystemUserName).press('Tab');
 
-  await page.locator(Lc.SystemUserPassword).fill(Udata.getUserPass());
+  await page.locator(Lc.SystemUserPassword).fill(conf.loginPassword);
   await page.locator(Lc.SystemUserPassword).press('Tab');
 
   //await page.getByRole('button', { name: 'Login' }).press('Enter');
@@ -32,10 +36,10 @@ test.beforeEach(async ({page}) => {
 
   test.slow();
 
-  await page.waitForURL(Lc.DashURL);
+  await page.waitForURL(conf.DashURL);
   
   page.getByText(' Welcome To DotCare!');
-  page.getByText(Udata.getUserName(), { exact: true });
+  page.getByText(conf.loginPassword, { exact: true });
 
 });
 
@@ -51,11 +55,6 @@ test('BulkDischarge', async({page}) => {
   
 
 });
-
-
-
-
-
 
 
 

@@ -1,26 +1,33 @@
 import { Page ,Locator} from '@playwright/test';
-import { ConfigData } from './Data';
-
+import { ConfigData } from '@tests/modules/finance/shared/functions/Data';
+import { Config } from '@tests/shared/environment-configuration';
 export class PageL{
 //
 readonly page:Page;
 readonly CD:ConfigData;
-readonly uName:Locator;
-readonly unPass:Locator;
-readonly LoginBtn:Locator;
+readonly env:Config;
 
-constructor (page)
-{
-    this.page=page;
-    this.uName= page.locator(this.CD.SystemUserName);
-    this.unPass= page.locator(this.CD.SystemUserPassword);
-    this.LoginBtn= page.locator(this.CD.SystemUserName);
 
-}//constractor
+
+/// Login Locators
+SystemUserName :string="//input[@id='userName']";
+SystemUserPassword :string="//input[@id='password']";
+SystemLogInBtn:string="button[type='submit']"
+//-----------------------------------------------------------------------------
+
+/// Cost Center Locators
+AddEditNewCostCenterCode:string="//input[@name='Code']";
+AddEditNewCostCenterEname:string="//input[@name='EnName']";
+AddEditNewCostCenterArame:string="//input[@name='ArName']";
+FilterCostCenterEnName:string="//input[@aria-label='English Name']";
+toasterS: string = "div[class='k-notification-content'] p"
+
+
+
 
 
 async goto() {
-    await this.page.goto(this.CD.SystemURL);
+    await this.page.goto(this.env.baseUrl);
 }
 
 
