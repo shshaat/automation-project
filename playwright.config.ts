@@ -13,7 +13,7 @@ export default defineConfig({
   //globalSetup: require.resolve('./tests/shared/global.setup'),
   /* Run tests in files in parallel */
   fullyParallel: true,
-  timeout:50000,
+  timeout:150000,
   expect:{
     timeout: 50000,
   },
@@ -28,7 +28,7 @@ export default defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
-    // baseURL: 'http://127.0.0.1:3000',
+     baseURL: 'http://backoffice-prelive.andalusiagroup.net:8090',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
